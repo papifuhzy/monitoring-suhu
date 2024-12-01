@@ -1,0 +1,126 @@
+body {
+  margin: 20px 0;
+  padding: 0;
+  background-image: url("background.png");
+  font-family: "Poppins", sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  background-color: rgba(209, 240, 255, 0.9);
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ikan img {
+  height: 100px;
+  margin-top: -20px;
+  /* align-content: center; */
+  /* margin: 20px auto; */
+  /* animation: swim 3s ease-in-out infinite; */
+}
+
+.ikan img:hover {
+  animation: swim 3s ease-in-out infinite;
+}
+
+@keyframes swim {
+  0% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(-10px);
+  }
+}
+
+.logo h1 {
+  font-size: 2.5rem;
+  color: #000000;
+  margin: 0;
+}
+
+.header {
+  text-align: center;
+  background-color: rgba(209, 240, 255, 0.9);
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 70px;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  color: #0055aa;
+  margin: 0;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container {
+  background-color: rgba(234, 244, 255, 0.637);
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.status-icon,
+.termometer-icon,
+.air-icon {
+  width: 60px;
+  height: 60px;
+  margin: 10px auto;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-text {
+  font-size: 1.8rem;
+  color: #4caf50;
+  margin: 10px 0;
+}
+
+#suhu-value,
+#kekeruhan-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.grafik {
+  height: 270px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .grafik {
+    grid-column: span 1;
+  }
+}

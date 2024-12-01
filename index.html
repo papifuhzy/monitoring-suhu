@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aquarium Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+
+  <body>
+    <center>
+      <div class="logo">
+        <h1>AKUARIUM-MU</h1>
+      </div>
+      <div class="ikan">
+        <img src="ikan.png" alt="ikan" />
+      </div>
+      <div class="header">
+        <h2>REAL TIME MONITORING</h2>
+      </div>
+    </center>
+
+    <div class="dashboard">
+      <div class="container status">
+        <h2>Status</h2>
+        <div class="status-icon">🔔</div>
+        <p class="status-text">NORMAL</p>
+        <p>Semua parameter normal</p>
+      </div>
+
+      <div class="container suhu">
+        <h2>Suhu Saat Ini</h2>
+        <div class="termometer-icon">🌡️</div>
+        <p><span id="suhu-value">27</span> °C</p>
+        <p>Optimal: 24-28°C</p>
+      </div>
+
+      <div class="container kekeruhan">
+        <h2>Kekeruhan Air</h2>
+        <div class="air-icon">💧</div>
+        <p><span id="kekeruhan-value">7</span> NTU</p>
+        <p>Batas Aman: < 10 NTU</p>
+      </div>
+
+      <div class="container grafik">
+        <h2>Parameter Air</h2>
+        <canvas id="ParameterChart"></canvas>
+      </div>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
